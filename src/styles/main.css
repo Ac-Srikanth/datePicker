@@ -1,0 +1,64 @@
+main > *,
+header,
+footer {
+	margin: 4px;
+	padding: 5px;
+	border-radius: 7px;
+}
+
+main {
+	display: flex;
+	flex-basis: 300px;
+	text-align: center;
+}
+
+.main-content {
+	flex: 3 0 50%;
+	background: #ecf0f1;
+}
+
+.display-city {
+	padding: 20px;
+	border: 2px solid black;
+}
+
+.display-day-month {
+	margin-top: 30px;
+	border: 2px solid black;
+	padding: 20px;
+}
+
+.cities {
+	flex: 1 1 20%;
+	background: #95a5a6;
+	order: -1;
+}
+
+.cityEl,
+.monthEl {
+	padding: 10px;
+}
+.months {
+	flex: 1 1 20%;
+	background: #3498db;
+}
+header,
+footer {
+	background: #1abc9c;
+	flex-basis: 100px;
+}
+
+@media all and (max-width: 640px) {
+	main {
+		flex-direction: column;
+		flex-grow: 1;
+	}
+
+	.cities {
+		order: 0;
+	}
+	header,
+	footer {
+		flex-basis: 50px;
+	}
+}
